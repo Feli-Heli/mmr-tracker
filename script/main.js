@@ -1113,9 +1113,8 @@ function isBridgeOpen() {
 function init() {
     populateMapdiv();
     populateItemconfig();
-
-    loadCookie();
     noExtraOnLoad();
+    loadCookie();
 }
 
 function preloader() {
