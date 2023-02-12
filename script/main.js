@@ -50,14 +50,6 @@ var selected = {};
 
 var dungeonSelect = 0;
 
-function setCookie(obj) {
-    var d = new Date();
-    d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
-    var expires = "expires=" + d.toUTCString();
-    var val = JSON.stringify(obj);
-    document.cookie = "key=" + val + ";" + expires + ";path=/";
-}
-
 function getCookie() {
     var name = "key=";
     var ca = document.cookie.split(';');
