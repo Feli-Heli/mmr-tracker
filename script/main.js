@@ -296,7 +296,7 @@ function setMapTracker() {
         for (var j = 0; j < 35; j++) {
             document.getElementById("dungeon" + j).style.visibility = "visible";
         }
-        for (var j = 35; j < 40; j++) {
+        for (var j = 35; j < 39; j++) {
             document.getElementById("dungeon" + j).style.visibility = "hidden";
         }
     }
