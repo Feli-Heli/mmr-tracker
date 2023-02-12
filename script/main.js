@@ -50,6 +50,14 @@ var selected = {};
 
 var dungeonSelect = 0;
 
+function setCookie(obj) {
+    var d = new Date();
+    d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
+    var expires = "expires=" + d.toUTCString();
+    var val = JSON.stringify(obj);
+    document.cookie = "key=" + val + ";" + expires + ";path=/";
+}
+
 function getCookie() {
     var name = "key=";
     var ca = document.cookie.split(';');
@@ -286,7 +294,7 @@ function showPrizes(sender) {
 
 //map check options
 function noExtraOnLoad() {
-    for (var j = 35; j < 39; j++) {
+    for (var j = 35; j < 40; j++) {
         document.getElementById("dungeon" + j).style.visibility = "hidden";
     }
 }
@@ -296,7 +304,7 @@ function setMapTracker() {
         for (var j = 0; j < 35; j++) {
             document.getElementById("dungeon" + j).style.visibility = "visible";
         }
-        for (var j = 35; j < 39; j++) {
+        for (var j = 35; j < 40; j++) {
             document.getElementById("dungeon" + j).style.visibility = "hidden";
         }
     }
@@ -1113,8 +1121,10 @@ function isBridgeOpen() {
 function init() {
     populateMapdiv();
     populateItemconfig();
-    noExtraOnLoad();
+
     loadCookie();
+    saveCookie();
+    noExtraOnLoad();
 }
 
 function preloader() {
