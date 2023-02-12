@@ -1086,7 +1086,7 @@ var dungeons = [
             'Pillar': { isAvailable: function () {
                 return canAccessCanyon() && ((items.Light && items.Bow && items.Magic) || items.shield >=2 || canHover()) && items.Deku && items.Fire && items.Bow && items.Magic; }, },
             'Ikana King': { isAvailable: function () {
-                return canAccessCanyon() && ((items.Light && items.Bow && items.Magic) || items.shield >=2 || canHover()) && items.Bow && ((items.Goron && items.PowderKeg) || canHover()) && items.Magic && items.Fire && items.shield >=2; }, }, 
+                return canAccessCanyon() && ((items.Light && items.Bow && items.Magic) || items.shield >=2 || canHover()) && items.Bow && ((items.Goron && items.PowderKeg) || canHover() || (items.Light && items.Bow && items.Magic)) && items.Magic && items.Fire && items.shield >=2; }, }, 
         },
         isBeatable: function() {
             return this.canGetChest();
@@ -1183,6 +1183,21 @@ var dungeons = [
                 return canAccessOcean() && canPlay(items.EponasSong) && (items.Hookshot || canHover()); }, },
             'Cow 2': { isAvailable: function () {
                 return canAccessOcean() && canPlay(items.EponasSong) && (items.Hookshot || canHover()); }, },
+        },
+        isBeatable: function() {
+            return this.canGetChest();
+        },
+        canGetChest: function() {
+            return generalCanGetChest(this.chestlist);
+        },
+    },
+          {
+        name: "Beneath the Well Cow",
+        x: "78.0%",
+        y: "47.5%",
+        chestlist: {
+            'Cow': { isAvailable: function () {
+                return canAccessCanyon() && items.Gibdo && items.Bottle; }, },      
         },
         isBeatable: function() {
             return this.canGetChest();
