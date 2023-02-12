@@ -1197,7 +1197,7 @@ var dungeons = [
         y: "47.5%",
         chestlist: {
             'Cow': { isAvailable: function () {
-                return canAccessCanyon() && items.Gibdo && items.Bottle; }, },      
+                return canAccessCanyon() && items.Gibdo && items.Bottle && canPlay(items.EponasSong); }, },      
         },
         isBeatable: function() {
             return this.canGetChest();
