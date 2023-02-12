@@ -286,7 +286,7 @@ function showPrizes(sender) {
 
 //map check options
 function noExtraOnLoad() {
-    for (var j = 35; j < 40; j++) {
+    for (var j = 35; j < 39; j++) {
         document.getElementById("dungeon" + j).style.visibility = "hidden";
     }
 }
@@ -1115,7 +1115,6 @@ function init() {
     populateItemconfig();
 
     loadCookie();
-    saveCookie();
     noExtraOnLoad();
 }
 
