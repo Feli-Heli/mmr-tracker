@@ -2,7 +2,7 @@
 
 Web based item tracker with map tracking for Majora's Mask randomizer based on testrunnersrl's Oot item tracker!
 
-Go here to check it out: https://felixhelixtm.github.io/mmr-tracker/
+Go here to check it out: https://feli-heli.github.io/mmr-tracker/
 
 Changes to V1.1:
 
